@@ -1,0 +1,4 @@
+model,val_macro_auroc,ci_low,ci_high,auroc_NORM,auroc_MI,auroc_STTC,auroc_CD,auroc_HYP,test
+Prevalence (no signal),0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,not yet used
+Logistic regression,0.859,0.849,0.868,0.88,0.832,0.846,0.864,0.871,not yet used
+Random forest,0.857,0.848,0.867,0.876,0.836,0.825,0.859,0.891,not yet used
