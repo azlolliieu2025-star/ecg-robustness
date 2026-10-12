@@ -1,0 +1,35 @@
+{
+  "n_records_raw": 21799,
+  "n_patients_raw": 18869,
+  "n_dropped_no_superclass": 411,
+  "n_age_300": 285,
+  "n_any_noise": 4912,
+  "n_dropped_pacemaker": 14,
+  "n_dropped_bad_signal": 0,
+  "n_flat_lead": 1,
+  "n_extreme_amp": 1,
+  "n_train": 17074,
+  "class_counts_train": {
+    "NORM": 7594,
+    "MI": 4375,
+    "STTC": 4181,
+    "CD": 3906,
+    "HYP": 2118
+  },
+  "n_val": 2144,
+  "class_counts_val": {
+    "NORM": 955,
+    "MI": 539,
+    "STTC": 528,
+    "CD": 493,
+    "HYP": 267
+  },
+  "n_test": 2156,
+  "class_counts_test": {
+    "NORM": 961,
+    "MI": 550,
+    "STTC": 521,
+    "CD": 496,
+    "HYP": 262
+  }
+}
