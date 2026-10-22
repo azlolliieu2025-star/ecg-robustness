@@ -10,6 +10,7 @@ from sklearn.metrics import roc_auc_score
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
+from evaluate import save_preds
 
 SEED = 0
 CLASSES = ["NORM", "MI", "STTC", "CD", "HYP"]
@@ -51,6 +52,9 @@ for name, model in models.items():
         p_va = model.predict_proba(F_va)
         if isinstance(p_va, list):              # random forest returns one array per class
             p_va = np.column_stack([pc[:, 1] for pc in p_va])
+    short = {"Logistic regression": "lr", "Random forest": "rf"}.get(name)
+    if short:
+        save_preds(short, p_va)
     auc, lo, hi = bootstrap_auc(y_va, p_va)
     per_class = roc_auc_score(y_va, p_va, average=None)
     rows.append({"model": name, "val_macro_auroc": round(auc, 3),
