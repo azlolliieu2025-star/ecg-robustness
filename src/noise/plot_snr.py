@@ -21,7 +21,7 @@ for ax, (rec, title) in zip(axes, NOISE.items()):
         part = pd.concat([clean.assign(order=0), noisy])
         ax.plot(part["order"], part["macro_auroc"], marker="o", ms=5, lw=2, color=color, label=label)
         ax.fill_between(part["order"], part["ci_low"], part["ci_high"], color=color, alpha=0.12, lw=0)
-    ax.axhline(0.5, ls="--", lw=1, color=MUTED)
+        ax.set_ylim(0.75, 0.95)
     ax.set_xticks(range(5), X_LABELS)
     ax.set_xlabel("SNR (dB)  →  noisier", color=MUTED)
     ax.set_title(title, loc="left", fontsize=11, color=INK)
