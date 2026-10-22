@@ -1,0 +1,7 @@
+model,subgroup,n,macro_auroc,ci_low,ci_high
+lr,clean,1616,0.864,0.852,0.874
+lr,noisy,528,0.846,0.825,0.866
+mlp,clean,1616,0.884,0.873,0.894
+mlp,noisy,528,0.86,0.84,0.878
+rf,clean,1616,0.861,0.849,0.872
+rf,noisy,528,0.845,0.824,0.863
