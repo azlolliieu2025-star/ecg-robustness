@@ -1,0 +1,7 @@
+model_a,model_b,difference,ci_low,ci_high,ci_excludes_zero
+cnn,mlp,0.046,0.039,0.053,True
+cnn,lr,0.065,0.058,0.073,True
+cnn,rf,0.066,0.058,0.074,True
+mlp,lr,0.019,0.014,0.025,True
+mlp,rf,0.02,0.013,0.027,True
+lr,rf,0.001,-0.006,0.008,False
